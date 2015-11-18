@@ -43,6 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="1. Association\Car.cs" />
+    <Compile Include="1. Association\Driver.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -50,7 +52,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="1. Association\" />
     <Folder Include="2. Whole-parts\" />
     <Folder Include="3. Generalization-Specialization\" />
   </ItemGroup>
