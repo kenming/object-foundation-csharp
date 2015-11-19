@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using hsdc.ofc.sample1;     // import the necessary packages.
 using hsdc.ofc.sample2;
+using hsdc.ofc.sample3;
 
 namespace hsdc.ofc
 {
@@ -13,13 +14,15 @@ namespace hsdc.ofc
         static void Main(string[] args)
         {
             // doSample1();
-            doSample2();
+            // doSample2();
+            doSample3();
         }
 
+        // Demo: Association (關聯)
         static void doSample1()
         {
-            Driver aDriver = new Driver("志玲");      // new a Driver instance who is named "志玲"
-            hsdc.ofc.sample1.Car aCar = aDriver.aCar;                  // 透過 Driver 取得 Car instance
+            Driver aDriver = new Driver("志玲");        // new a Driver instance who is named "志玲"
+            hsdc.ofc.sample1.Car aCar = aDriver.aCar;   // 透過 Driver 取得 Car instance
 
             Console.WriteLine("駕駛員： " + aDriver.name);
             Console.WriteLine("------------------------------------------");
@@ -35,6 +38,7 @@ namespace hsdc.ofc
             Console.ReadLine();     //Pause
         }
 
+        // Demo: Whole-parts (整體-局部)
         static void doSample2()
         {
             hsdc.ofc.sample2.Car aCar = new sample2.Car();
@@ -43,6 +47,27 @@ namespace hsdc.ofc
             Console.WriteLine(aCar.踩油門());
             Console.WriteLine(aCar.get引擎狀況());
             Console.WriteLine("------------------------------------------");
+
+            Console.WriteLine("\n\n" + "Press any Key to continue...");
+            Console.ReadLine();     //Pause
+        }
+
+        // Demo: Generalization-Specialization (一般化-特殊化)
+        static void doSample3()
+        {
+            汽車工廠 factory = new 汽車工廠();
+
+            // 製造車子
+            factory.製造(1);      // 製造轎車
+
+            foreach (sample3.Car aCar in factory.getAll已製造車子())
+            {
+                Console.WriteLine("-------------已製造車子資訊---------------");
+                Console.WriteLine(aCar.查詢車子資訊());
+                Console.WriteLine("馬力： " + Convert.ToString(aCar.calc馬力()));
+                Console.WriteLine("車況： " + aCar.查詢車子資訊());
+                Console.WriteLine("------------------------------------------"+"\n\n");
+            }
 
             Console.WriteLine("\n\n" + "Press any Key to continue...");
             Console.ReadLine();     //Pause

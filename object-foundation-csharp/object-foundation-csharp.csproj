@@ -48,15 +48,16 @@
     <Compile Include="2. Whole-parts\Car.cs" />
     <Compile Include="2. Whole-parts\引擎.cs" />
     <Compile Include="2. Whole-parts\輪胎.cs" />
+    <Compile Include="3. Generalization-Specialization\Car.cs" />
+    <Compile Include="3. Generalization-Specialization\SubCars.cs" />
+    <Compile Include="3. Generalization-Specialization\汽車工廠.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="3. Generalization-Specialization\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
