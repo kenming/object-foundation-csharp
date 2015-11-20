@@ -45,6 +45,11 @@ namespace hsdc.ofc.sample1
             return 車況;
         }
 
+        public string 發動()
+        {
+            return "動作： 發動";
+        }
+
         public string 踩油門()
         {
             return "動作： 踩油門";
@@ -55,9 +60,9 @@ namespace hsdc.ofc.sample1
             return "動作： 排檔-> " + 排檔別;
         }
 
-        public string 發動()
+        public string 轉動方向盤()
         {
-            return "動作： 發動";
+            return "動作： 轉動方向盤";
         }
 
         public string 煞車()
@@ -68,11 +73,6 @@ namespace hsdc.ofc.sample1
         public string 關閉()
         {
             return "動作： 關閉";
-        }
-
-        public string 轉動方向盤()
-        {
-            return "動作： 轉動方向盤";
         }
     }
 }

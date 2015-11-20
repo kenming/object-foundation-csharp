@@ -16,14 +16,23 @@ namespace hsdc.ofc.sample3
             carList = new List<Car>();
         }
 
-        public Car 製造(int cartype)
+        // 依據傳入的車型編號，來決定所製造的車型
+        public Car 製造(int cartype, string carno)
         {
             Car aCar;
 
             switch (cartype)
             {
                 case 1:
-                    aCar = new 轎車("轎車-中型");
+                    aCar = new 轎車("轎車-輕型", carno);
+                    carList.Add(aCar);
+                    return aCar;
+                case 2:
+                    aCar = new 卡車("卡車-中型", carno);
+                    carList.Add(aCar);
+                    return aCar;
+                case 3:
+                    aCar = new 坦克車("坦克車-重型", carno);
                     carList.Add(aCar);
                     return aCar;
                 default:

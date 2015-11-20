@@ -58,14 +58,18 @@ namespace hsdc.ofc
             汽車工廠 factory = new 汽車工廠();
 
             // 製造車子
-            factory.製造(1);      // 製造轎車
+            factory.製造(1, "BWM-1688");        // 製造轎車
+            factory.製造(2, "TRUNK-8888");      // 製造卡車
+            factory.製造(3, "TANK-01925");      // 製造坦克車
+            factory.製造(2, "CAPCOM-17799");     // 製造卡車
+            factory.製造(1, "Toyota-5201314");  // 製造轎車
 
             foreach (sample3.Car aCar in factory.getAll已製造車子())
             {
                 Console.WriteLine("-------------已製造車子資訊---------------");
                 Console.WriteLine(aCar.查詢車子資訊());
-                Console.WriteLine("馬力： " + Convert.ToString(aCar.calc馬力()));
-                Console.WriteLine("車況： " + aCar.查詢車子資訊());
+                Console.WriteLine("馬力： " + Convert.ToString(aCar.calc馬力()));                
+                Console.WriteLine("車況： " + aCar.query車況());
                 Console.WriteLine("------------------------------------------"+"\n\n");
             }
 
